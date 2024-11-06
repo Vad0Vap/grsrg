@@ -1,0 +1,139 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+h1{
+    font-size: 16px;
+}
+header, main, footer {
+   width: 100%;
+}
+
+.grid {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    width: 100%;
+    height: 100px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    gap: 10px;
+    transition: transform 0.3s;
+    
+}
+.grid-item:hover {     
+    transform: scale(1.05);
+}
+footer {
+    color: #030303;
+    padding: 10px 20px;
+    background-color: #f0f0f0;   
+    
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.9em; 
+    color: #666; 
+}
+
+.row {
+    display: flex;
+    gap: 5px;  
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1330px;
+    margin: 0 auto;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.consultations { background-color: #000000; }
+.strategy { background-color: #502702; }
+.investment { background-color: #4e4e4e; }
+.marketing { background-color: #03f768; }
+.startups { background-color: #242323; }
+.anti-crisis { background-color: #04ebbc; }
+
+
+@media (min-width: 2560px) {
+  
+    .header {
+        font-size: 32px;
+    }
+    .grid {
+        grid-template-columns: repeat(3, 2fr);
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .header {
+        font-size: 28px;
+    }
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+  
+   
+    .header {
+        font-size: 24px;
+    }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        font-size: 20px;
+    }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+   
+}
+
+@media (max-width: 425px) {
+    .header {
+        font-size: 18px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .grid-item {
+        font-size: 16px;
+    }
+}
+
